@@ -1,0 +1,28 @@
+﻿<Window x:Class="Project.View.EditRequestCommissioningIndividualMeteringDevice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project.View"
+        mc:Ignorable="d"
+        Title="Заявление о вводе в эксплуатацию индивидуального прибора учета" Height="450" Width="675">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="167,60,0,0" Text="{Binding MDFullName}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="167,159,0,0" Text="{Binding MDIdPersonalAccount}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="167,207,0,0" Text="{Binding MDService}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker SelectedDate="{Binding MDDateCommissioning}" HorizontalAlignment="Left" Margin="167,253,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="507,60,0,0" Text="{Binding MDFactoryNumber}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="507,111,0,0" Text="{Binding MDTypeDevice}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="507,168,0,0" Text="{Binding MDDeviceReadingsAtTheTimeOfAdmission}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="507,217,0,0" Text="{Binding MDInstallationLocation}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Text="ФИО:" HorizontalAlignment="Left" Margin="110,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Номер лицевого счета"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="102,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Услуга"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="41,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Дата ввода в "/><LineBreak/><Run Text="эксплуатаци"/><Run Text="ю ПУ:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="379,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Заводской номер"/><LineBreak/><Run Text="(нового ПУ)"/><Run Language="ru-ru" Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="369,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Тип прибора учета:"/>
+        <TextBlock HorizontalAlignment="Left" Margin="369,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Показания прибора"/><LineBreak/><Run Text="на момент выпуска"/><Run Language="ru-ru" Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="365,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Место установки ПУ"/><Run Text=":"/></TextBlock>
+        <Button Command="{Binding EditRequestCommissioningIndividualMeteringDevice}" Content="Сохранить" HorizontalAlignment="Left" Margin="415,309,0,0" VerticalAlignment="Top" Height="57" Width="152"/>
+    </Grid>
+</Window>

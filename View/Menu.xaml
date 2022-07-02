@@ -1,0 +1,22 @@
+﻿<Window x:Class="Project.View.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project.View" xmlns:viewmodel="clr-namespace:Project.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MenuViewModel}"
+        mc:Ignorable="d"
+        Title="Меню" Height="249" Width="391">
+    <Grid>
+        <Button Content="Открыть историю заявок" Command="{Binding OpenMainWindowCommand}" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" Width="346" Height="30" FontSize="16"/>
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Center" Margin="0,76,0,0" VerticalAlignment="Top" Width="346" Height="30">
+            <TextBlock Text="                          Создать заявку:" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Visible" FontSize="16"/>
+            <Button Content="Создать заявку на создание нового лицевого счета" Command="{Binding OpenAddRequestWindowCommand}"/>
+            <Button Content="Создать заявку на изменение количества потребителей" Command="{Binding OpenAddApplicationForChangingTheNumberOfConsumersCommand}"/>
+            <Button Content="Создать заявку на изменение параметров лицевого счета" Command="{Binding OpenAddRequestChangeParametersPersonalAccount}"/>
+            <Button Content="Создать заявку на перерасчет платы за коммунальные услуги в связи с временным отсутствием" Command="{Binding OpenAddRequestRecalculationFee}"/>
+            <Button Content="Создать заявку о вводе в эксплуатацию индивидуального прибора учета" Command="{Binding OpenAddRequestCommissioningIndividualMeteringDevice}"/>
+        </ComboBox>
+        <Button Command="{Binding OpenWindowPersonalAccountStatement}" Content="Выписка из финансового лицевого счета" HorizontalAlignment="Center" VerticalAlignment="Top" Width="346" Height="30" Margin="0,124,0,0" FontSize="16"/>
+        <Button Command="{Binding OpenReportWindow}" Content="Отчет по выбранной заявке" HorizontalAlignment="Center" VerticalAlignment="Top" Width="345" Height="30" Margin="0,170,0,0" FontSize="16"/>
+    </Grid>
+</Window>

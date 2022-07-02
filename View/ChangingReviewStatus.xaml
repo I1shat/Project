@@ -1,0 +1,14 @@
+﻿<Window x:Class="Project.View.ChangingReviewStatus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project.View"
+        mc:Ignorable="d"
+        Title="Изменение статуса рассмотрения" Height="257" Width="250">
+    <Grid Margin="0,0,0,-6">
+        <RadioButton IsChecked="{Binding Approve}" Content="Одобрить" HorizontalAlignment="Left" Margin="84,55,0,0" VerticalAlignment="Top"/>
+        <RadioButton IsChecked="{Binding Reject}" Content="Отклонить" HorizontalAlignment="Left" Margin="84,75,0,0" VerticalAlignment="Top"/>
+        <Button Command="{Binding ChangingReviewStatus}" Content="Подтвердить" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" Height="62" Width="144"/>
+    </Grid>
+</Window>

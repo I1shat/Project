@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Project.View.UserControlListOfConsumersForTheRecalculation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="180" d:DesignWidth="350">
+    <Grid Margin="5,0,0,0" Height="160">
+        <StackPanel Background="WhiteSmoke">
+            <TextBlock Text="   ФИО абонента"/>
+            <TextBox Text="{Binding LCRFullName}" Width="335" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+            <TextBlock Text="   Дата начала"/>
+            <DatePicker SelectedDate="{Binding LCRStartDate}" Width="335" HorizontalAlignment="Left"/>
+            <TextBlock Text="   Дата окончания"/>
+            <DatePicker SelectedDate="{Binding LCREndDate}" Width="335" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="Project.View.PersonalAccountStatementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project.View"
+        mc:Ignorable="d"
+        Title="Выписка из лицевого счета" Height="118" Width="424">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="38,60,0,0" Text="{Binding IdPersonalAccount}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Command="{Binding CreateDocumentPersonalAccountStatement}" Content="Печать" HorizontalAlignment="Left" Margin="228,25,0,0" VerticalAlignment="Top" Height="43" Width="166"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Введите номер лицевого счета"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+    </Grid>
+</Window>

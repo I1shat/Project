@@ -1,0 +1,33 @@
+﻿<Window x:Class="Project.View.AddRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project.View" xmlns:viewmodel="clr-namespace:Project.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:AddRequestWindowViewModel}"
+        mc:Ignorable="d"
+        Title="Заявка на создание нового лицевого счета" Height="450" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="283,136,0,0" Text="{Binding PAAddressFacility}" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox HorizontalAlignment="Left" Margin="283,36,0,0" Text="{Binding PAFullName}" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox Text="{Binding PATelephone, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="283,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox Text="{Binding PALivingArea}" HorizontalAlignment="Left" Margin="283,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox Text="{Binding PATotalArea}" HorizontalAlignment="Left" Margin="283,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox Text="{Binding PAShareSize}" HorizontalAlignment="Left" Margin="283,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox HorizontalAlignment="Left" Margin="598,69,0,0" Text="{Binding PAPassportSeries}" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <DatePicker HorizontalAlignment="Left" Margin="598,152,0,0" SelectedDate="{Binding PAPassportDate}" VerticalAlignment="Top" Width="131"/>
+        <TextBox HorizontalAlignment="Left" Margin="598,110,0,0" Text="{Binding PAPassportId}" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox HorizontalAlignment="Left" Margin="598,198,0,0" Text="{Binding PADepartmentCode}" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBlock HorizontalAlignment="Left" Margin="489,70,0,0" Text="Серия паспорта:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="485,111,0,0" Text="Номер паспорта:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="452,156,0,0" Text="Дата выдачи паспорта:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="476,198,0,0" Text="Код департамента:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <GroupBox Header="Паспорт" HorizontalAlignment="Left" Height="173" Margin="434,49,0,0" VerticalAlignment="Top" Width="321"/>
+        <TextBlock HorizontalAlignment="Left" Margin="230,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="ФИО:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="156,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Адрес помещения"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="61,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Площадь жилого помещения (кв.м)"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="66,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Общая площадь помещения (кв.м)"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="135,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Размер д"/><Run Text="ол"/><Run Text="и"/><Run Text=" в праве "/><LineBreak/><Run Text="общей собственности"/><Run Text=":"/></TextBlock>
+        <TextBlock Text="Номер телефона:" HorizontalAlignment="Left" Margin="165,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Создать заявку" Command="{Binding AddRequestCreatePersonalAccountCommand}" HorizontalAlignment="Left" Margin="507,257,0,0" VerticalAlignment="Top" Height="53" Width="175"/>
+    </Grid>
+</Window>
